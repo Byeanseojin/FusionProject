@@ -10,12 +10,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>내 글 관리</title>
   <style>
-    /*.container{*/
-    /*    display: flex;*/
-    /*    justify-content: center; !* 수평 중앙 정렬 *!*/
-    /*    align-items: center;*/
-    /*    height: 100vh;*/
-    /*}*/
     .MyPost {
       display: block;
       margin-top: 200px;
@@ -76,6 +70,14 @@
       width: 50px;
       color: black;
     }
+    #myPost_writing{
+      text-decoration: none;
+      color: black;
+    }
+    #myPost_comment{
+      text-decoration: none;
+      color: darkgray;
+    }
 
   </style>
 </head>
@@ -111,7 +113,7 @@
       </li>
       <hr class="sidebar-hr">
       <li><div class="sidebar-insta">인스타추천</div></li>
-      <li><div class="instaImg"><img src="../imgs/instagram.png " width="30" height="30"></div></li>
+      <li><div class="instaImg"><img src="../../imgs/instagram.png " width="30" height="30"></div></li>
     </ul>
   </div>
   <!-- 토글 버튼 -->
@@ -121,8 +123,8 @@
   <h2 id="MyPost">내가 쓴 글</h2>
   <div class="row">
     <div class="col text-end"> <!-- 오른쪽 정렬 -->
-      <a href="#">게시글</a>
-      <a href="#">댓글</a>
+      <a href="#" id="myPost_writing">게시글</a>
+      <a href="#" id="myPost_comment">댓글</a>
     </div>
   </div>
 
@@ -140,7 +142,7 @@
     <button type="button" id="deletePost">선택된 글 삭제</button>
   </div>
 </div>
-<script src="../js/toggle.js"></script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const selectAllButton = document.getElementById('selectAll'); // 모두 선택 버튼
@@ -263,9 +265,7 @@
       }
     });
   });
-
-
 </script>
-
+<script src="../../js/toggle.js"></script>
 </body>
 </html>

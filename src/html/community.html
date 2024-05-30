@@ -16,10 +16,12 @@
             margin: 100px auto;
             justify-content: center; /* 가로 중앙 정렬 */
             width: 70%;
+            height: 70vh;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* 글쓰기 버튼 위치를 위한 설정 */
         }
 
         .community-section {
@@ -55,6 +57,20 @@
 
         .pagination-button.active {
             background-color: #6a5acd;
+        }
+        .container-write {
+            bottom: 10px;
+            position: absolute;
+            right: 20px; /* 오른쪽에서 20px */
+        }
+
+        #write {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -120,6 +136,7 @@
                 <!-- 페이징 버튼 -->
             </div>
         </div>
+        <div class="container-write"><a href="#" id="write">글쓰기</a></div>
     </div>
     <div class="menu-toggle">&#9776;</div>
 </div>
